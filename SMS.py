@@ -7,9 +7,9 @@ print("| .__/ \___/|_|___/\___/|_| |_|____/|_|  \_\ ")
 print("| | SMS Sender 1.0")
 print("|_| by p0isonBR")
 print("    t.me/p0isonBR")
+print(" ")
 
 import requests
-import time
 import urllib.parse
 
 USER = input("Your API username: ")
@@ -17,6 +17,8 @@ PASS = input("Your API password: ")
 NUMBER = input("Destination number, with country code: ") 
 SENDER = input("Custom sender number: ")
 TEXT = input("SMS content: ")
+
+print("Sending SMS...")
 
 urllib.parse.quote(TEXT)
 
