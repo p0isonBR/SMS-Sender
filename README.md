@@ -1,5 +1,6 @@
-# SMS-Sender
-By p0isonBR | join in my channel: t.me/p0isonBR_Hub
+# SMS-Sender 1.0
+By p0isonBR 
+join in my channel: http://t.me/p0isonBR_Hub
 
 A simple SMS sender throught D7 Networks
 
