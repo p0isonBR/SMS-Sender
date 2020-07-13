@@ -18,7 +18,6 @@ NUMBER = input("Destination number, with country code: ")
 SENDER = input("Custom sender number: ")
 TEXT = input("SMS content: ")
 
-urllib.parse.quote(NUMBER)
 urllib.parse.quote(TEXT)
 
 requests.request
