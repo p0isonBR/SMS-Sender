@@ -1,6 +1,4 @@
-# SMS-Sender 
-# Version 1.0
-# Author p0isonBR 
+# SMS-Sender by p0isonBR 
 join in my channel: http://t.me/p0isonBR_Hub
 
 Description: A simple SMS sender throught D7 Networks.
