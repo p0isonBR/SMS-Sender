@@ -1,4 +1,6 @@
 #SMS SENDER by p0isonBR
+import os
+os.system('cls' if os.name == 'nt' else 'clear')
 print("                            /+osyhhhhhhyys++/                            ")
 print("                         +oydddhhhhyyhhhhdddhy+/                         ")
 print("                      /+yddhyyyysssssssssyyyhddhs/                       ")
@@ -40,8 +42,7 @@ print("                | |*t.me/p0isonBR*                                       
 print("                |_|*by p0isonBR*                                         ")
 
 import time
-time.sleep(3)
-import os
+time.sleep(5)
 os.system('cls' if os.name == 'nt' else 'clear')
 
 print("        ___  _                 ____  _____ ")
