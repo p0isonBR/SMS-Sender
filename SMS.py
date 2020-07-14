@@ -1,3 +1,49 @@
+#SMS SENDER by p0isonBR
+print("                            /+osyhhhhhhyys++/                            ")
+print("                         +oydddhhhhyyhhhhdddhy+/                         ")
+print("                      /+yddhyyyysssssssssyyyhddhs/                       ")
+print("                     +hddyyssssssssssssssssssyyhdds/                     ")
+print("                   /sddhyyyyyyssssssssssssssyyyyyhmh+                    ")
+print("                  /hmdhhddddddhhhyyyyyyhhhhdddddhhhddo                   ")
+print("                 /hmmdhs+/ //+osyhhhhhhysso+////ohddmdo                  ")
+print("                /hmmmy.           `````          `smddd+                 ")
+print("                smddm/     `````          `````   mdhmh/                 ")
+print("               +ddydm+  -/osyyyys+.    ./syyyyso/-mdydms                 ")
+print("               ymhyhmh.yyo/ -- +hdo  /dho -- /oyh.ymdyymd/               ")
+print("              /dmyyymd.  ``.-   ./   -/.-   .``  `dmhsydmo               ")
+print("              smdysymd   shdhyydy      sdyyhddy   dmyyshmy               ")
+print("              dmysshmy                            smhssymd/              ")
+print("             /dmyssymd                            hmhsyymm/              ")
+print("             /dmyssyhms                          /mdysyymm/              ")
+print("             /dmyssyydm/  sh       hh/     -hy  .dmyssyymm/              ")
+print("              dmhssssydd/ -hdhysshdysdhssyhdd  -hmhyssyymd/              ")
+print("              ymhssssyyddo``. //+/.` ./+// -` /ddhysssyhmh               ")
+print("              +mdysssssyhdh `     `/+`      -sddysssssydmo               ")
+print("               ymhysssssyyddh/`   `dm.   ` sddhysssssyhmh/               ")
+print("               /hmhysssssyyyhdds ..dm . ohddhyyssssyyhmd+                ")
+print("                /yddhyssssssyyhhddhddddddhyyssssssyydmh+                 ")
+print("               /+sdmmdhhyyyysssyyyyyyyyyysssyyyyyhddmdyo+/               ")
+print("           /+shdddhhyhhddddddhhhhhhhhhhhhhhdddddddhyyhhdddyo/            ")
+print("         /shddhyyysssssyyyyhhhhhhhhhhhhhhhhhhyyyyyssssyyyhdddy+          ")
+print("        /hmhyyssssssssssssssssssssssssssssssssssssssssssssyyhddo         ")
+print("        /dmhyyyyyssssssssssssssssssssssssssssssssssssssyyyyyydms         ")
+print("         +yhddddddhhhhhyyyyyyyyyyyyyyyyyyyyyyyyyyhhhhhdddddddhs/         ")
+print("           //++oossyyhhhhhhhdddddddddddddddddhhhhhhyyssoo++///           ")
+print("                       ///////+++++++++++++//////                        ")
+print("                        ___  _                 ___   ____                ")
+print("                       / _ \(_)               |  _ \|  __ \              ")
+print("                 ____ | | | | |___   _   ____ | |_| | |__) |             ")
+print("                |  _ \| | | | / __|/ _ \|  _ \| |_ <|  _  /              ")
+print("                | |_) | |_| | \__ \ (_) | | | | |_| ) | \ \              ")
+print("                |  __/ \___/|_|___/\___/|_| |_|____/|_|  \_\             ")
+print("                | |*t.me/p0isonBR*                                       ")
+print("                |_|*by p0isonBR*                                         ")
+
+import time
+time.sleep(3)
+import os
+os.system('cls' if os.name == 'nt' else 'clear')
+
 print("        ___  _                 ____  _____ ")
 print("       / _ \(_)               |  _ \|  __ \ ")
 print(" _ __ | | | |_ ___  ___  _ __ | |_) | |__) | ")
@@ -9,33 +55,16 @@ print("|_| by p0isonBR")
 print("    t.me/p0isonBR")
 print(" ")
 
-import requests
-#import urllib.parse
-
-USER = input("Your API username: ")
-PASS = input("Your API password: ")
-NUM = input("Destination number, with country code:") 
-SENDER = input("Custom sender number: ")
-TEXT = input("SMS content: ")
-
-print("Sending SMS...")
-
-#urllib.parse.quote(TEXT)
-
-url = "https://http-api.d7networks.com/send"
-querystring = {
-"username":"USER",
-"password":"PASS",
-"from":"SENDER",
-"content":"TEXT",
-"dlr-method":"POST",
-"dlr-url":"https://4ba60af1.ngrok.io/receive",
-"dlr":"yes",
-"dlr-level":"3",
-"to":"NUM"
-}
+import urllib.parse
+from urllib.parse import urlencode
+url = "https://rest-api.d7networks.com/secure/send"
+payload = "{\n\t\"to\":\"input('Destination Number: ')\",\n\t\"content\":\"input('SMS content')\",\n\t\"from\":\"input('Custom Sender number': ')\",\n\t\"dlr\":\"yes\",\n\t\"dlr-method\":\"GET\", \n\t\"dlr-level\":\"2\", \n\t\"dlr-url\":\"http://yourcustompostbackurl.com\"\n}"
 headers = {
-'cache-control': "no-cache"
+  'Content-Type': 'application/x-www-form-urlencoded',
+  'Authorization': 'Basic Y2ZqdzUwNzg6TTA4ajVSMjA='
 }
-response = requests.request("GET", url, headers=headers, params=querystring)
+
+import requests
+response = requests.request("POST", url, headers=headers, data=payload)
+
 print(response.text)
