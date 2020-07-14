@@ -20,7 +20,7 @@ TEXT = input("SMS content: ")
 
 print("Sending SMS...")
 
-urllib.parse.quote(TEXT)
+#urllib.parse.quote(TEXT)
 
 url = "https://http-api.d7networks.com/send"
 querystring = {
