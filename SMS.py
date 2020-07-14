@@ -10,7 +10,7 @@ print("    t.me/p0isonBR")
 print(" ")
 
 import requests
-import urllib.parse
+#import urllib.parse
 
 USER = input("Your API username: ")
 PASS = input("Your API password: ")
