@@ -9,7 +9,6 @@ print("|_| by p0isonBR")
 print("    t.me/p0isonBR")
 print(" ")
 
-import requests
 import urllib.parse
 
 USER = input("Your API username: ")
@@ -22,7 +21,6 @@ print("Sending SMS...")
 
 urllib.parse.quote(TEXT)
 
-requests.request
 url = "https://http-api.d7networks.com/send"
 querystring = {
 "username":"USER",
