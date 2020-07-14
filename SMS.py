@@ -14,7 +14,7 @@ import urllib.parse
 
 USER = input("Your API username: ")
 PASS = input("Your API password: ")
-NUM = input("Destination number, with country code: ") 
+NUM = input("Destination number, with country code:") 
 SENDER = input("Custom sender number: ")
 TEXT = input("SMS content: ")
 
