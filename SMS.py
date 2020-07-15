@@ -45,6 +45,7 @@ import time
 time.sleep(5)
 os.system('cls' if os.name == 'nt' else 'clear')
 
+
 print("        ___  _                 ____  _____ ")
 print("       / _ \(_)               |  _ \|  __ \ ")
 print(" _ __ | | | |_ ___  ___  _ __ | |_) | |__) | ")
@@ -56,10 +57,15 @@ print("|_| by p0isonBR")
 print("    t.me/p0isonBR")
 print(" ")
 
-import urllib.parse
-from urllib.parse import urlencode
+input("Your API username: ")
+input("Your API password: ")
+input("Number destination: ")
+input("SMS content: ")
+
+print("Sending SMS...")
+
 url = "https://rest-api.d7networks.com/secure/send"
-payload = "{\n\t\"to\":\"input('Destination Number: ')\",\n\t\"content\":\"input('SMS content')\",\n\t\"from\":\"input('Custom Sender number': ')\",\n\t\"dlr\":\"yes\",\n\t\"dlr-method\":\"GET\", \n\t\"dlr-level\":\"2\", \n\t\"dlr-url\":\"http://yourcustompostbackurl.com\"\n}"
+payload = "{\n\t\"to\":\"+5548996492609\",\n\t\"content\":\"Oi\",\n\t\"from\":\"27700\",\n\t\"dlr\":\"yes\",\n\t\"dlr-method\":\"GET\", \n\t\"dlr-level\":\"2\", \n\t\"dlr-url\":\"http://yourcustompostbackurl.com\"\n}"
 headers = {
   'Content-Type': 'application/x-www-form-urlencoded',
   'Authorization': 'Basic Y2ZqdzUwNzg6TTA4ajVSMjA='
