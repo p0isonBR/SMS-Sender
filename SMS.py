@@ -69,7 +69,7 @@ payload['dlr-method'] = "POST"
 payload['dlr-url'] = "https://4ba60af1.ngrok.io/receive"
 payload['dlr'] = "yes"
 payload['dlr-level'] = "3"
-payload['to'] = input("Number destination: ")
+payload['to'] = input("Destination number: ")
 
 print("Sending SMS...")
 
