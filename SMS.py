@@ -59,14 +59,16 @@ print(" ")
 
 url = "https://http-api.d7networks.com/send"
 payload = {
-"dlr-method":"POST",
-"dlr-url":"https://4ba60af1.ngrok.io/receive",
-"dlr":"yes",
-"dlr-level":"3",
 }
 
 payload['username'] = input("Your API username: ")
 payload['password'] = input("Your API password: ")
+payload['to'] = input("Number destination: ")
+payload['content'] = input("SMS content: ")
+payload['dlr-method'] = "POST"
+payload['dlr-url'] = "https://4ba60af1.ngrok.io/receive"
+payload['dlr'] = "yes"
+payload['dlr-level'] = "3"
 payload['to'] = input("Number destination: ")
 payload['content'] = input("SMS content: ")
 
