@@ -3,7 +3,7 @@ import os
 os.system('cls' if os.name == 'nt' else 'clear')
 print("                            /+osyhhhhhhyys++/                            ")
 print("                         +oydddhhhhyyhhhhdddhy+/                         ")
-print("                      /+yddhyyyysssssssssyyyhddhs/                       ")
+print("                      /+yddhyyyys.josue.syyhddhs/                       ")
 print("                     +hddyyssssssssssssssssssyyhdds/                     ")
 print("                   /sddhyyyyyyssssssssssssssyyyyyhmh+                    ")
 print("                  /hmdhhddddddhhhyyyyyyhhhhdddddhhhddo                   ")
