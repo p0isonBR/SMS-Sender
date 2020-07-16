@@ -57,15 +57,12 @@ print("|_| by p0isonBR")
 print("    t.me/p0isonBR")
 print(" ")
 
-print("Sending SMS...")
-
-url = "https://rest-api.d7networks.com/secure/send"
+url = "https://http-api.d7networks.com/send"
 payload = {
-  'from': '27700',
-  'dlr': 'yes',
-  'dlr-method': 'GET',
-  'dlr-level': '2',
-  'dlr-url': 'http://yourcustompostbackurl.com'
+"dlr-method":"POST",
+"dlr-url":"https://4ba60af1.ngrok.io/receive",
+"dlr":"yes",
+"dlr-level":"3",
 }
 
 payload['username'] = input("Your API username: ")
@@ -73,11 +70,12 @@ payload['password'] = input("Your API password: ")
 payload['to'] = input("Number destination: ")
 payload['content'] = input("SMS content: ")
 
+print("Sending SMS...")
+
 headers = {
-  'Content-Type': 'application/x-www-form-urlencoded',
+'cache-control': "no-cache"
 }
 
 import requests
-response = requests.request("POST", url, headers=headers, data=payload)
-
+response = requests.request("GET", url, headers=headers, params=payload)
 print(response.text)
